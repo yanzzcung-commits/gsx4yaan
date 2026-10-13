@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Katalog layanan YAANZ SUNTIK ALL SOSMED. Lihat katalog dan pesan melalui WhatsApp.">
+  <title>YAANZ SUNTIK ALL SOSMED</title>
+  <style>
+    :root{--bg:#080808;--panel:#121212;--panel2:#191919;--text:#f7f7f7;--muted:#b8b8b8;--line:#303030;--white:#fff;--black:#080808}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{font-weight:900;letter-spacing:.7px;font-size:14px}
+    .brand span{display:block;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:2px}
+    .navlinks{display:flex;gap:18px;font-size:13px;color:var(--muted)}
+    .navlinks a:hover{color:white}
+    .hero{padding:64px 0 44px}
+    .eyebrow{display:inline-block;border:1px solid #555;border-radius:99px;padding:6px 11px;color:#ddd;font-size:11px;letter-spacing:1.4px;text-transform:uppercase}
+    h1{font-size:clamp(34px,7vw,66px);line-height:1.02;letter-spacing:-2px;margin:18px 0}
+    h1 span{color:#999}
+    .hero p{max-width:600px;color:var(--muted);margin:0 0 25px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:1px solid #eee;background:#fff;color:#080808;border-radius:10px;padding:12px 17px;font-weight:800;cursor:pointer}
+    .btn.secondary{background:transparent;color:#fff;border-color:#555}
+    .btn:hover{transform:translateY(-1px)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:38px}
+    .stat{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:15px}
+    .stat strong{display:block;font-size:19px}.stat small{color:var(--muted)}
+    section{padding:36px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}
+    h2{font-size:clamp(24px,4vw,34px);margin:0;letter-spacing:-.7px}
+    .sub{color:var(--muted);font-size:13px;margin:6px 0 0}
+    .tools{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px}
+    .search{flex:1;min-width:190px;background:#111;border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:#fff;outline:none}
+    .search:focus{border-color:#aaa}
+    .filter{background:#111;border:1px solid #444;color:#eee;border-radius:99px;padding:9px 13px;cursor:pointer;font-size:12px}
+    .filter.active{background:#fff;color:#000;border-color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .card{background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;flex-direction:column;min-height:235px}
+    .card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .platform{font-size:11px;color:#ccc;border:1px solid #444;border-radius:99px;padding:5px 8px}
+    .symbol{width:40px;height:40px;display:grid;place-items:center;background:#fff;color:#000;border-radius:12px;font-weight:900;font-size:18px}
+    .card h3{margin:15px 0 4px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .price{font-size:20px;font-weight:900;margin:15px 0}
+    .price small{font-size:11px;color:var(--muted);font-weight:500}
+    .card .btn{margin-top:auto;width:100%;padding:10px;font-size:13px}
+    .notice{border:1px dashed #555;border-radius:12px;padding:14px;color:#c8c8c8;font-size:12px;margin-top:18px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .step{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:13px}
+    .step b{display:block;margin-bottom:5px}.step p{color:var(--muted);font-size:13px;margin:0}
+    .contact{background:#f5f5f5;color:#090909;border-radius:18px;padding:25px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .contact p{margin:5px 0 0;color:#444;font-size:13px}
+    .contact .btn{background:#080808;color:#fff;border-color:#080808;white-space:nowrap}
+    footer{border-top:1px solid var(--line);margin-top:35px;padding:22px 0 32px;color:#999;font-size:12px}
+    .empty{grid-column:1/-1;color:#aaa;padding:24px;text-align:center;border:1px dashed #444;border-radius:12px}
+    @media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:10px;font-size:12px}.hero{padding-top:45px}}
+    @media(max-width:520px){.navlinks a:nth-child(2){display:none}.grid{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:16px}.stat small{font-size:10px}.steps{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.contact .btn{width:100%}h1{letter-spacing:-1.3px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">YAANZ<span>SUNTIK ALL SOSMED</span></a>
+    <nav class="navlinks" aria-label="Navigasi">
+      <a href="#layanan">Layanan</a><a href="#cara-pesan">Cara pesan</a><a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" id="home">
+    <span class="eyebrow">Katalog layanan digital</span>
+    <h1>Naikkan tampilan<br><span>media sosialmu.</span></h1>
+    <p>Jelajahi katalog YAANZ SUNTIK ALL SOSMED. Pilih layanan yang tersedia, cek harga, lalu tanyakan detail pesanan melalui WhatsApp.</p>
+    <div class="actions">
+      <a class="btn" href="#layanan">Lihat katalog <span aria-hidden="true">↘</span></a>
+      <a class="btn secondary" id="heroWa" href="#" target="_blank" rel="noopener">Chat WhatsApp</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>4+</strong><small>Kategori layanan</small></div>
+      <div class="stat"><strong>24/7</strong><small>Katalog online</small></div>
+      <div class="stat"><strong>WA</strong><small>Pemesanan langsung</small></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="layanan">
+    <div class="section-head">
+      <div><h2>Katalog layanan</h2><p class="sub">Pilih kategori dan tekan pesan untuk menanyakan layanan.</p></div>
+    </div>
+    <div class="tools" role="group" aria-label="Filter layanan">
+      <input class="search" id="search" type="search" placeholder="Cari layanan..." aria-label="Cari layanan">
+      <button class="filter active" data-filter="Semua">Semua</button>
+      <button class="filter" data-filter="Instagram">Instagram</button>
+      <button class="filter" data-filter="TikTok">TikTok</button>
+      <button class="filter" data-filter="YouTube">YouTube</button>
+      <button class="filter" data-filter="Lainnya">Lainnya</button>
+    </div>
+    <div class="grid" id="catalog"></div>
+    <div class="notice">Catatan: harga pada katalog ini adalah contoh awal dan perlu disesuaikan dengan harga asli. Hasil, kecepatan, dan ketersediaan layanan dapat berbeda; jangan menjanjikan angka atau hasil yang belum pasti.</div>
+  </section>
+
+  <section class="wrap" id="cara-pesan">
+    <div class="section-head"><div><h2>Cara pesan</h2><p class="sub">Alur singkat dari katalog ke WhatsApp.</p></div></div>
+    <div class="steps">
+      <div class="step"><b>01 — Pilih layanan</b><p>Cari platform dan layanan yang ingin ditanyakan.</p></div>
+      <div class="step"><b>02 — Tekan tombol pesan</b><p>WhatsApp akan terbuka dengan pesan pesanan yang sudah disiapkan.</p></div>
+      <div class="step"><b>03 — Konfirmasi detail</b><p>Pastikan harga, jumlah, waktu pengerjaan, dan ketentuan sebelum membayar.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="kontak">
+    <div class="contact">
+      <div><h2>Butuh bantuan?</h2><p>Hubungi YAANZ untuk menanyakan katalog dan ketersediaan layanan.</p></div>
+      <a class="btn" id="contactWa" href="#" target="_blank" rel="noopener">Pesan via WhatsApp ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="year"></span> YAANZ SUNTIK ALL SOSMED · Katalog layanan digital</div></footer>
+
+<script>
+  // GANTI nomor ini dengan nomor WhatsApp bisnis Anda, format internasional tanpa tanda + atau spasi.
+  const WHATSAPP_NUMBER = "6281234567890";
+
+  // Ubah nama, kategori, deskripsi, dan harga di daftar ini sesuai katalog asli Anda.
+  const SERVICES = [
+    {platform:"Instagram", symbol:"IG", name:"Followers Instagram", description:"Pilihan jumlah followers sesuai kebutuhan.", price:"Mulai Rp17.000", detail:"Followers Instagram"},
+    {platform:"Instagram", symbol:"IG", name:"Views Instagram", description:"Layanan views untuk konten Instagram.", price:"Tanyakan harga", detail:"Views Instagram"},
+    {platform:"Instagram", symbol:"IG", name:"Likes Instagram", description:"Layanan likes untuk konten Instagram.", price:"Tanyakan harga", detail:"Likes Instagram"},
+    {platform:"TikTok", symbol:"TT", name:"Followers TikTok", description:"Tanyakan paket dan ketersediaan.", price:"Tanyakan harga", detail:"Followers TikTok"},
+    {platform:"TikTok", symbol:"TT", name:"Views TikTok", description:"Tanyakan paket views yang tersedia.", price:"Tanyakan harga", detail:"Views TikTok"},
+    {platform:"TikTok", symbol:"TT", name:"Likes TikTok", description:"Tanyakan paket likes yang tersedia.", price:"Tanyakan harga", detail:"Likes TikTok"},
+    {platform:"YouTube", symbol:"YT", name:"Views YouTube", description:"Tanyakan detail paket dan ketentuan.", price:"Tanyakan harga", detail:"Views YouTube"},
+    {platform:"YouTube", symbol:"YT", name:"Subscribers YouTube", description:"Tanyakan ketersediaan dan harga.", price:"Tanyakan harga", detail:"Subscribers YouTube"},
+    {platform:"Lainnya", symbol:"WA", name:"Layanan media sosial lain", description:"Tanyakan platform lain yang tersedia.", price:"Tanyakan harga", detail:"Layanan media sosial lainnya"}
+  ];
+
+  let activeFilter = "Semua";
+  const catalog = document.getElementById("catalog");
+  const search = document.getElementById("search");
+
+  function waLink(message) {
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+  function render() {
+    const term = search.value.trim().toLowerCase();
+    const items = SERVICES.filter(s =>
+      (activeFilter === "Semua" || s.platform === activeFilter) &&
+      (s.name + " " + s.description + " " + s.platform).toLowerCase().includes(term)
+    );
+    catalog.innerHTML = "";
+    if (!items.length) {
+      catalog.innerHTML = '<div class="empty">Layanan tidak ditemukan. Coba kata kunci lain.</div>';
+      return;
+    }
+    items.forEach(s => {
+      const card = document.createElement("article");
+      card.className = "card";
+      const top = document.createElement("div");
+      top.className = "card-top";
+      const symbol = document.createElement("div");
+      symbol.className = "symbol";
+      symbol.textContent = s.symbol;
+      const platform = document.createElement("span");
+      platform.className = "platform";
+      platform.textContent = s.platform;
+      top.append(symbol, platform);
+      const title = document.createElement("h3");
+      title.textContent = s.name;
+      const desc = document.createElement("p");
+      desc.textContent = s.description;
+      const price = document.createElement("div");
+      price.className = "price";
+      price.textContent = s.price;
+      const button = document.createElement("a");
+      button.className = "btn";
+      button.textContent = "Pesan via WhatsApp ↗";
+      button.href = waLink("Halo YAANZ SUNTIK ALL SOSMED, saya ingin bertanya tentang " + s.detail + ". Mohon info harga, jumlah/paket, dan ketentuannya.");
+      button.target = "_blank";
+      button.rel = "noopener";
+      card.append(top, title, desc, price, button);
+      catalog.appendChild(card);
+    });
+  }
+
+  document.querySelectorAll(".filter").forEach(btn => {
+    btn.addEventListener("click", () => {
+      activeFilter = btn.dataset.filter;
+      document.querySelectorAll(".filter").forEach(b => b.classList.toggle("active", b === btn));
+      render();
+    });
+  });
+  search.addEventListener("input", render);
+  document.getElementById("heroWa").href = waLink("Halo YAANZ SUNTIK ALL SOSMED, saya ingin bertanya tentang layanan yang tersedia.");
+  document.getElementById("contactWa").href = waLink("Halo YAANZ SUNTIK ALL SOSMED, saya ingin bertanya tentang katalog layanan.");
+  document.getElementById("year").textContent = new Date().getFullYear();
+  render();
+</script>
+</body>
+</html>
